@@ -7,17 +7,17 @@ const parseNumbers = (numbers) => {
     return values;
   });
   return numbers;
-}
+};
 module.exports = {
   sumPartOne: (numbers) => {
     numbers = parseNumbers(numbers);
 
-    sum = 0;
+    let sum = 0;
     numbers.forEach(row => {
       let max = Math.max(...row);
       let min = Math.min(...row);
       sum += Math.abs((max - min));
-    })
+    });
     return sum;
   },
   sumPartTwo: (numbers) => {
@@ -39,4 +39,4 @@ module.exports = {
     });
     return sum;
   }
-}
+};
